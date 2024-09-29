@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com/" >
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Montserrat&display=swap" rel="stylesheet">
+    <title>Greenway</title>
+  </head>
+  <body>
+    <header>
+        <div class="navbar">
+            <div class="navbar-left">
+                <img id="logo" src="images/IUTlogo.png" alt="LogoIUT">
+                <h1>Greenway</h1>
+            </div>
+            <div class="navbar-right">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="informations.html">Informations</a></li>
+                    <li><a href="sondage.html">Sondage</a></li>
+                </ul>
+            </div>   
+        </div>
+    </header>
+    <main>
+        <section id="form">
+            <h2>Le sondage, c'est par ici !</h2>
+            <form method="POST" action="https://perso.liris.cnrs.fr/pierre-antoine.champin/enseignement/intro-web/_static/formproc/debug">
+                <div class="field_infos">
+                    <div class="field">
+                        <label for="lastname">Nom :</label>
+                        <input id="lastname" name="lastname" type="text" placeholder="Nom" required>
+                    </div>
+                    <div class="field">
+                        <label for="firstname">Prénom :</label>
+                        <input id="firstname" name="firstname" type="text" placeholder="Prénom" required>
+                    </div>
+                    <div class="field">
+                        <label for="email">Email :</label>
+                        <input id="email" name="email" type="email" placeholder="Email" required>
+                    </div>
+                </div>
+                <div class="field_list">
+                    <fieldset>
+                        <legend>Mode(s) de transport que vous utilisez actuellement :</legend>
+                        <label>
+                            <input name="transport" type="checkbox" value="car">
+                            Voiture
+                        </label>
+                        <label>
+                            <input name="transport" type="checkbox" value="moto">
+                            Moto
+                        </label>
+                        <label>
+                            <input name="transport" type="checkbox" value="pubtp">
+                            Transports en commun
+                        </label>
+                        <label>
+                            <input name="transport" type="checkbox" value="bike">
+                            Vélo
+                        </label>
+                        <label>
+                            <input name="transport" type="checkbox" value="foot">
+                            Marche à pieds
+                        </label>
+                        <label>
+                            <input name="transport" type="checkbox" value="other" class="checker">
+                            Autre(s)
+                        </label>
+                    </fieldset>
+                </div>
+                <div class="field_other_comment">
+                    <fieldset>
+                        <legend>Détaillez votre ou vos autre(s) mode(s) de transport :</legend>
+                        <textarea name="other comment" cols="42" rows="3"></textarea>
+                    </fieldset>
+                </div>
+                <div class="field_comment">
+                    <fieldset>
+                        <legend>Commentaire supplémentaire (optionnel) :</legend>
+                        <textarea name="comment" cols="42" rows="7"></textarea>
+                    </fieldset>
+                </div>
+                <div class="field_buttons">
+                    <button type="submit">Envoyer</button>
+                    <button type="reset">Tout effacer</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        DIOCHON Cyril / KHEEREESANTIKUL Khanison
+    </footer>
+  </body>
+</html>

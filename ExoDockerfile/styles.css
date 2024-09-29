@@ -1,0 +1,329 @@
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*Header -----------------------------------*/
+header{
+    position: sticky;
+    top: 0;
+}
+
+#logo {
+    width: 250px;
+    height: 100px;
+}
+
+header h1 {
+    font-family: 'Lato', sans-serif;
+}
+
+/*Navbar*/
+.navbar {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: solid 1px grey;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+    align-items: center;
+}
+
+.navbar-left {
+    display: flex;
+    gap: 10px;
+}
+
+.navbar ul{
+    margin-right: 35px;
+}
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+.navbar a {
+
+    padding: 1rem;
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+    justify-content: space-between;
+}
+
+
+/*Footer ----------------------------*/
+footer {
+    padding: 1rem;
+    background-color: grey;
+    color: white;
+    justify-content: center;
+    text-align: center;
+    margin-top: auto;
+}
+
+
+
+/*Contentenus -------------------------------------------------------------*/
+p {
+    padding-left: 1rem;
+}
+
+/*Page accueil ----------------------------------------------*/
+.sous-container1-accueil {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sous-container1-accueil, .sous-container2-accueil{
+    margin: 0 60px;
+}
+
+.sous-container2-accueil{
+    margin-top: 60px;
+}
+
+.image-accueil{
+    display: block;
+    margin: auto;
+    margin-bottom: 30px;
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border: solid 1px grey;
+    background-color: rgba(151, 148, 148, 0.349);
+    border-radius: 20px;
+}
+
+.image-accueil2{
+    margin-bottom: 50px;
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    border: solid 1px grey;
+    background-color: rgba(151, 148, 148, 0.349);
+    border-radius: 20px;
+}
+
+.case-accueil1 a{
+    text-decoration: none;
+    color: black;
+}
+
+/*Page Accueil & Informations --------------------------------------------------------- */
+
+.main-text, .main-text-2, .sous-titre1, .sous-titre2, .main-text-accueil {
+    padding: 1rem;
+    margin: 30px;
+    margin-bottom: 60px;
+}
+
+.main-text-accueil, .main-text, .main-text-2, .tableau-texte, .tableau-transports-texte, .velo-trot-texte, .sous-titre1, .sous-titre2, .img-texte-accueil, .img-texte-accueil2, .main-text-accueil-2{
+    text-align: center;
+}
+
+/*Page informations ----------------------------------- */
+.tableau {
+    margin: auto 25px auto 25px;
+}
+
+.tableau-image, .tableau-transports-image{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 600px;
+    width: 600px;
+    object-fit: cover;
+    box-shadow: 0 5px 15px 0 rgba(0,0,0,.5);
+}
+
+
+/*Sondage -------------------------*/
+form {
+    display: grid;
+}
+
+
+
+
+/*Responsive -------------------------------------------------------------------------------------------------*/
+
+/*Responsive Accueil & Navbar*/
+@media (max-width: 885px){
+
+    .sous-container2-accueil{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .image-accueil2{
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .img-lien-accueil2{
+        margin: 0;
+    }
+
+    .navbar-left{
+        flex-direction: column;
+    }
+}
+
+/*Responsive Accueil*/
+@media (min-width: 886px){
+
+    .sous-container2-accueil{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .image-accueil2{
+        display: block;
+    }
+}
+
+/*Responsive Accueil & Informations*/
+@media (max-width: 1420px){
+    .tableau, .sous-container1-accueil{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+/*Responsive Informations*/
+@media (min-width: 1821px){
+
+    .tableau-transports-communs, .tableau-velo-trot {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }    
+}
+
+@media (min-width: 1421px){
+    .tableau {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 3rem;
+    }
+}
+
+@media (max-width: 1820px){
+
+    .tableau-transports-communs, .tableau-velo-trot{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .tableau-transports-image{
+        margin-bottom: 50px;
+    }
+}
+
+
+/*Responsive Sondage*/
+
+@media (min-width: 701px){
+    form {
+        grid-template: repeat(5, auto) / repeat(3, auto);
+    }
+
+    .field_infos {
+        grid-area: 1 / 1 / span 1 / span 3;
+        display: grid;
+        grid-template: auto / repeat(3, auto);
+        padding: 0.1rem 1rem;
+    }
+
+    .field_infos .field {
+        margin: auto;
+    }
+
+    .field_list {
+        grid-area: 2 / 1 / span 1 / span 3;
+        padding: 0.1rem 1rem;
+    }
+
+    .field_other_comment {
+        display: none;
+        grid-area: 3 / 1 / span 1 / span 3;
+        padding: 0.1rem 1rem;
+    }
+
+    .field_list:has(.checker:checked) + .field_other_comment {
+        display: block;
+    }
+
+    .field_comment {
+        grid-area: 4 / 1 / span 1 / span 3;
+        padding: 0.1rem 1rem;
+    }
+
+    .field_buttons {
+        grid-area: 5 / 1 / span 1 / span 3;
+        display: grid;
+        grid-template: auto / repeat(2, auto);
+        gap: 1rem;
+        padding: 0.1rem 1rem;
+    }
+}
+
+@media (max-width: 700px){
+    form {
+        grid-template: repeat(7, auto) / auto;
+    }
+
+    .field_infos {
+        grid-area: 1 / 1 / span 1 / span 3;
+        display: grid;
+        grid-template: repeat(3, auto) / 1fr;
+        padding: 0.1rem 1rem;
+    }
+
+    .field_infos .field {
+        margin: auto;
+    }
+
+    .field_list {
+        grid-area: 2 / 1 / span 1 / span 1;
+        padding: 0.1rem 1rem;
+    }
+
+    .field_other_comment {
+        display: none;
+        grid-area: 3 / 1 / span 1 / span 1;
+        padding: 0.1rem 1rem;
+    }
+
+    .field_list:has(.checker:checked) + .field_other_comment {
+        display: block;
+    }
+
+    .field_comment {
+        grid-area: 4 / 1 / span 1 / span 1;
+        padding: 0.1rem 1rem;
+    }
+
+    .field_buttons {
+        grid-area: 5 / 1 / span 1 / span 1;
+        display: grid;
+        grid-template: repeat(2, auto) / auto;
+        padding: 0.1rem 1rem;
+    }
+}
